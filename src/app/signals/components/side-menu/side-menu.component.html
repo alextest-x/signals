@@ -1,0 +1,17 @@
+<ul class="list-group">
+   <!-- ponemos parentesis porque se estan usando señales en menuItems()-->
+  <li *ngFor="let item of menuItems()"
+    class="list-group-item"
+    [routerLink]="[ item.route ]"
+    routerLinkActive="active">
+    {{ item.title }}
+  </li>
+
+</ul>
+
+<!-- {{menuItems}} esta es la refecencia de la señal pero no es el valor
+    aqui esta todos los metodo para update o obtener el valor  -->
+
+    <!-- para obtener el valaor de la señal lo pongo entre parentesis menuItems() -->
+    {{ menuItems() }}
+
